@@ -1,0 +1,138 @@
+
+/* CSS RESET */
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-neutral-light:#ddded6;
+	--color-neutral-medium:#999;
+	--color-neutral-dark:#555;
+
+	
+	--color-main-light:blue;
+	--color-main-medium:lightblue;
+	--color-main-dark:blue; 
+
+
+	--color-black:#000;
+	--color-white:#fff;
+
+
+	--font-serif: 'Cormorant Garamond', serif;
+	--font-sans: 'Nanum Gothic', sans-serif;
+	--font-title:'Libre Baskerville', serif;
+	--font-name: 'Arimo', sans-serif;
+}
+
+body{
+	margin:0;
+	font-size:100%;
+	font-family:var(--font-sans);
+	background-color: var(--color-offwhite);
+}
+
+.container{
+	
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.display-flex{ display: flex;}
+.display-inline-flex{ display: inline-flex;}
+.display-block{ display:block;}
+.display-inline-block{ display: inline-block;}
+
+
+.flex-stretch{ flex:1 1 auto; }
+.flex-none{ flex: none; }
+
+
+.flex-align-center{ align-items: center; }
+.flex-justify-center{ justify-content: center; }
+
+
+.navbar{
+	color: black;
+	line-height: var(--header-height);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+
+}
+
+
+.nav ul{
+	font-size: 1.2em;
+	list-style-type: none;
+	margin-top: 2em;
+	margin-bottom: 0;
+	padding-left: 0;
+	font-family: var(--font-title);
+	
+
+}
+
+.nav a{
+		color: var(--color-black);
+		display: block;
+		padding: 0.2em 0.5em;
+		text-decoration: none;
+	}
+
+
+.nav a:hover{
+		background-color: var(--color-neutral-light);
+		color:var(--color-white);
+		text-decoration: none;
+	}
+
+.nav .active a{
+		background-color: var(--color-neutral-light);
+		color: inherit;
+	}
+
+.nav-crumbs ul {
+		display: flex;
+	}
+
+.nav-crumbs a{
+	display: inline-block;
+
+}
+
+
+.nav-crumbs .active a,
+.nav-crumbs a:hover{
+	background:transparent;
+	color:inherit;
+	text-decoration: underline;
+
+}
+
+.nav-crumbs li:not(:first-child)::before{
+	content: '/';
+	/*content: '>';*/
+
+}
+
+.name{
+	color:var(--color-black);
+	text-align: center;
+	margin-top:2em;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: var(--font-name);
+
+
+}
+
+.infor{
+	color:var(--color-neutral-medium);
+	font-size: 1.8em;
+	font-family: var(--font-serif);
+	font-weight: italic;
+}
+
+

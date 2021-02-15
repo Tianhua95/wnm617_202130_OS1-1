@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+   
+        <title>Tian's Portfolio </title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
+	<link rel="stylesheet" href="css/storetheme.css">
+
+
+	<link href="https://fonts.font.im/css?family=Cormorant+Garamond:500i" rel="stylesheet">
+	<link href="https://fonts.font.im/css?family=Nanum+Gothic" rel="stylesheet">
+	<link href="https://fonts.font.im/css?family=Libre+Baskerville" rel="stylesheet">
+	<link href="https://fonts.font.im/css?family=Arimo" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        
+        
+    </head>
+    <body>
+		
+	    
+		
+
+<div class="name">
+	    	<h1>TIANHUA HUANG</h1>
+	    </div>
+
+
+ <section class="clearfix">
+
+
+	<script>
+		const makeNav = (classes='') =>{
+			const links=['WORK','PORTFOLIO','ABOUT'];
+			let ran = Math.floor(Math.random()*links.length);
+			document.write(`
+              <div>
+              <nav class="${classes}">
+
+              <ul>
+              ${links.reduce((r,o,i)=>{
+              	return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+              },'')}
+			      
+			</ul>
+		</nav>
+     </div>
+	`);
+		}
+
+	</script>	
+	
+		<script>makeNav('nav nav-crumbs')</script>
+
+	<script>
+		$("#navigations a").on("click",function(e){
+			e.preventDefault();
+			$(this).closest("li").addClass("active")
+			.siblings().removeClass("active")
+		})
+	</script>
+
+
+</section>
+<br>
+
+	    	<section class="clearfix">
+			<figure>
+				<img src="img/blood.png" alt="DEFINITION">
+				<h2>FLOW</h2>
+
+			</figure>
+			
+			<figure>
+				<img src="img/11.jpg" alt="ARTWORK">
+				<h2>LORA</h2>
+
+			</figure>
+			
+			<figure>
+				<img src="img/1.jpg" alt="BIO">
+			<h2>Go BITE</h2>
+
+			</figure>
+
+			<figure>
+				<img src="img/89.png" alt="SHARE">
+			<h2>My TOFU HOUSE</h2>
+
+			</figure>
+	
+			<figure>
+				<img src="img/4.png" alt="ABOUT">
+				<h2>TAXIFY</h2>
+
+			</figure>
+			
+			<figure>
+				<img src="img/vs.png" alt="CONTACT">
+				<h2>JIBO</h2>
+
+			</figure>
+			
+			
+			</section>
+			<br>
+			<br>
+			<br>
+		
+
+			<section class="clearfix">
+			<hr>
+		</section>	
+
+		 </body>
+
+		 <footer>
+
+			<br>
+			<br>
+			<br>
+			<section class="clearfix">
+					<div class="col-xs-10 col-md-4">
+				<div class="infor">
+				{ Say / Hi }</div>
+				<br>
+			<div class="infor">TIANHUA HUANG /<br>
+			<b>TEL:</b> +86 133####2409  <br>
+			<b>EMAIL:</b> Tianhuadesign@163.com<br>
+			<b>WEB:</b> Tianhuahuang.net</div>
+			<br>
+
+
+			<div class="copy">
+				&copy 2021 Tianhua Huang</div>
+				
+			</div>
+
+		</section>
+
+		</footer>
+
+		    
+
+				   
+</html>
