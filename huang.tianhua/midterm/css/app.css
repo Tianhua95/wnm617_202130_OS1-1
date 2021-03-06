@@ -12,7 +12,7 @@
 
    --color-neutral-light:#b58b6c;
    --color-neutral-medium:#b5793b;
-   --color-neutral-dark:#343030;
+   --color-neutral-dark:#351c11;
 
    --color-main-light:#edd8b9;
    --color-main-medium:#4ba0a8;
@@ -52,7 +52,13 @@ a:hover {
 
 img{
   width: 150px;
-  padding-bottom: 500px;
+  float: left;
+}
+h1{
+  font-family: var(--font-sans);
+  font-size:3em;
+  color:var( --color-neutral-dark);
+
 }
 
 
