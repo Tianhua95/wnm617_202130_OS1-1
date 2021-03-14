@@ -1,4 +1,3 @@
-
 /* CSS RESET */
 
 *, *::after, *::before {
@@ -6,16 +5,15 @@
 }
 
 :root {
-   --font-sans: 'Cabin', sans-serif;
+   --font-sans:Helvetica, Arial, sans-serif;
    --font-serif:Cambria, Georgia, serif;
-  
 
 
-   --color-neutral-light:#b58b6c;
-   --color-neutral-medium:#b5793b;
-   --color-neutral-dark:#351c11;
+   --color-neutral-light:#ede9e9;
+   --color-neutral-medium:#999191;
+   --color-neutral-dark:#343030;
 
-   --color-main-light:#edd8b9;
+   --color-main-light:#e5f1f2;
    --color-main-medium:#4ba0a8;
    --color-main-dark:#0a4349;
 
@@ -29,7 +27,6 @@ body {
    margin:0;
    font-size:100%;
    font-family:var(--font-sans);
-   background-color:var(--color-main-light);
 }
 
 h1,
@@ -50,29 +47,6 @@ a:hover {
    text-decoration: underline;
 }
 
-
-.logo>img{
-    width: 200px;
-    height: 200px;
-}
-.logo>h1{
-  font-family: var(--font-sans);
-  font-size:3em;
-  color:var( --color-neutral-dark);
-  padding:0;
-  margin: 0;
-
-}
-
-
-.foot>img{
-    width: 120px;
-    height: 120px;
-    opacity:0.3;
-    float: right;
-    transform:rotate(230deg);
-    margin-right:1%;
-}
 
 
 
@@ -158,16 +132,7 @@ a:hover {
   margin:0;
 }
 
-[data-role="header"] ul{
-  list-style-type:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  position:relative;
-}
-
-
-
+[data-role="header"] ul,
 [data-role="footer"] ul {
   list-style-type:none;
   margin:0;
@@ -308,6 +273,7 @@ a:hover {
 }
 
 
+
 .modal-head,
 .modal-foot {
   background-color:var(--color-neutral-light);
@@ -322,6 +288,13 @@ a:hover {
 }
 
 
+
+
+
+
+
+
+
 /* ICONS */
 .icon svg,
 .icon img {
@@ -329,6 +302,8 @@ a:hover {
   height:1em;
   vertical-align: text-bottom;
 }
+
+
 
 
 /* FLOATERS */
@@ -346,28 +321,14 @@ a:hover {
 
 
 
+
+
+
+
+
 /* remove this later */
 #recent-page [data-role='main'] {
   background-image: url('../img/map.png');
   background-position:center;
   background-size:cover;
 }
-
-a.js-list-add-animal.ui-link {
-    
-    color: white;
-    font-size: 2em;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-img{
-  width: 45px;
-  height: 45px;
-}
-
-img.back {
-    height: 30px;
-    width: 20px;
-    margin-top: 10px;
-
