@@ -22,7 +22,7 @@
 <body>
 
 <!-- sign in -->
-   <section data-role="page" id="signin-page">
+   <section data-role="page" id="signin-page"> <div class="overscroll">
 
       <div class="logo" style="padding:1em">
       <img src="img/logo.png" alt=""> 
@@ -45,7 +45,7 @@
                   <h1>Welcome</h1>
                   <h3>Sign in to your account</h3>
                </div>
-  </span>
+  </span> 
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
                   <label for="signin-username" class="form-label">Username</label>
@@ -55,32 +55,56 @@
                   <label for="signin-password" class="form-label">Password</label>
                   <input class="form-input" type="password" id="signin-password" data-role="none">
                </div>
-               <div class="form-control" style="width: 30%;float: right;">
-               <!-- <a href="#recent-page" class="form-button signin-button">Sign In</a> -->
-                  <input type="submit" class="form-button signin-button" value="Sign In" data-role="none">
-               </div>
-                  <span>
-                  <label class="keep">Keep me sign in
+               <div class="form-control">
+                  <div class="flex-none">
+                      <span>
+                  <label class="keep">Keep me signed in
                      <input type="checkbox">
                   </label>
                   </span>
-               
+               <!-- <a href="#recent-page" class="form-button signin-button">Sign In</a> -->
+
+               <div class="flex-stretch"></div>
+               <p></p>
+               <div class="flex-none">
+                  <input type="submit" class="form-button signin-button" value="Sign In" data-role="none">
+               </div>
+               </div>
+               </div>
             </form>
-
-                  
-
-            <div class="register" style="padding:1em; text-align: center;">
+            <div class="register" style="text-align: center;">
                   <p>Don't have an account? <a href="#register-page">Create a new!</a></p>
                </div>
 
          </div>
-      </div>
+      </div></div>
    </section>
 
 
 <!-- map -->
    <section data-role="page" id="recent-page">
-      <div data-role="main"></div>
+      <div data-role="main">
+         <div class="map-icon-test icon" style="position:absolute;left:20vw;top:40vh;font-size:2em" data-activate="#recent-test-modal">
+            <img src="img/location.svg" alt="">
+         </div>
+
+
+         <div class="modal" id="recent-test-modal">
+            <div class="modal-popup small" data-deactivate="#recent-test-modal">
+              
+            </div>
+         </div>
+          <div class="map-icon-test icon" style="position:absolute;right:20vw;top:20vh;font-size:2em" data-activate="#recent-test-modal">
+            <img src="img/location.svg" alt="">
+         </div>
+
+
+         <div class="modal" id="recent-test-modal">
+            <div class="modal-popup small" data-deactivate="#recent-test-modal">
+               
+            </div>
+         </div>
+      </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -123,7 +147,7 @@
                         <p>Hair Color:</p>
                         <p>Location:</p>
                      </div>
-                     <img src="img/can.svg" style="width: 100px; height:60px;position: absolute; right: 3%; top: 30%;">
+                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
                   </a>
                </li>
                <li>
@@ -135,7 +159,7 @@
                         <p>Hair Color:</p>
                         <p>Location:</p>
                      </div>
-                  <img src="img/can.svg" style="width: 100px; height:60px;position: absolute; right: 3%; top: 30%;">
+                  <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
                   </a>
                </li>
                <li>
@@ -147,7 +171,7 @@
                         <p>Hair Color:</p>
                         <p>Location:</p>
                      </div>
-                     <img src="img/can.svg" style="width: 100px; height:60px;position: absolute; right: 3%; top: 30%;">
+                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
                   </a>
                </li>
                <li>
@@ -159,7 +183,7 @@
                         <p>Hair Color:</p>
                         <p>Location:</p>
                      </div>
-                     <img src="img/can.svg" style="width: 100px; height:60px;position: absolute; right: 3%; top: 30%;">
+                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
                   </a>
                </li>
                <li>
@@ -171,7 +195,7 @@
                         <p>Hair Color:</p>
                         <p>Location:</p>
                      </div>
-                     <img src="img/can.svg" style="width: 100px; height:60px;position: absolute; right: 3%; top: 30%;">
+                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
                   </a>
                </li>
                <li>
@@ -183,7 +207,7 @@
                         <p>Hair Color:</p>
                         <p>Location:</p>
                      </div>
-                     <img src="img/can.svg" style="width: 100px; height:60px;position: absolute; right: 3%; top: 30%;">
+                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
                   </a>
                </li>
         
@@ -196,6 +220,7 @@
 <!-- add new -->
 
       <div class="modal" id="list-add-modal">
+         <div class="overscroll">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form class="modal-popup" data-ajax="false" id="list-add-form">
             <div class="modal-head">Dog</div>
@@ -220,7 +245,7 @@
                </div>
             </div>
          </form>
-      </div>
+      </div></div>
    </section>
 
 
@@ -228,6 +253,8 @@
 <!-- profile -->
 
 <section data-role="page" id="user-profile-page">
+
+   <div class="overscroll">
        <header data-role="header" style=" border-radius: 50%; width: 250px;
             height: 250px; padding:1em; background-color:#351c11; margin:0 auto;">
          <div class="profile" style="color:white;font-size: 2em;text-align: center;">
@@ -264,7 +291,7 @@
 
                </div>
             </form>
-      </div>
+      </div></div>
 
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
@@ -333,13 +360,29 @@
 
 
 
+ <script type="text/template" id="footer-template">
+   <ul class="title-icons">
+      <li><a href="#recent-page">
+         <span class="icon"><img src="img/location.svg" alt=""></span>
+         <span class="title">Location</span>
+      </a></li>
+      <li><a href="#list-page">
+         <span class="icon"><img src="img/profile.png" alt=""></span>
+         <span class="title">List</span>
+      </a></li>
+      <li><a href="#user-profile-page">
+         <span class="icon"><img src="img/house.png" alt=""></span>
+         <span class="title">Profile</span>
+      </a></li>
+   </ul>
+   </script>
 
-
-
+<!-- 
       <script type="text/template" id="footer-template">
       <ul>
          <li><a href="#recent-page">
             <img src="img/location.svg" alt=""></a>
+
          </li>
          <li><a href="#list-page">
             <img src="img/profile.png" alt=""></a>
@@ -348,7 +391,7 @@
             <img src="img/house.png" alt=""></a>
          </li>
       </ul>
-   </script>
+   </script> -->
 
    <script type="text/template" id="animal-link-template">
    this is an animal link
