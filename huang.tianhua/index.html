@@ -69,11 +69,50 @@
                </div>
             </form>
             <div class="register" style="text-align: center;">
-                  <p>Don't have an account? <a href="#register-page">Create a new!</a></p>
+                  <p>Don't have an account? <a href="#register-page">Register One</a></p>
                </div>
 
          </div>
       </div></div>
+   </section>
+
+   <!-- sign up page -->
+   <section data-role="page" id="register-page">
+      <div data-role="main" class="display-flex flex-vertical">
+
+         <div>
+            <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+               <div class="welcome">
+               <h1>CREATE ACCOUNT</h1>
+               <p>Please Fill In your details</p>
+               </div>
+
+            <form action="" id="profile-form" data-ajax="false" class="form">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">First Name</label>
+                  <input class="form-input" type="text" id="signup-first" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Last Name</label>
+                  <input class="form-input" type="text" id="signup-last" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-email" class="form-label">Email</label>
+                  <input class="form-input" type="email" id="signup-email" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signup-password" data-role="none">
+               </div>
+               <div class="welcome">
+               <p>Already have an Account?</p> <span>
+               <a href="#signin-page"><h4>SIGN IN</h4></a></span>
+               </div>
+
+            </form>
+         </div>
+
+      </div>
    </section>
 
 
@@ -86,20 +125,13 @@
 
 
          <div class="modal" id="recent-test-modal">
-            <div class="modal-popup small" data-deactivate="#recent-test-modal">
-              
+            <div class="modal-popup small"data-deactivate="#recent-test-modal">
+              <div class="modal-body">
+                  <div class="profile-username">This is one record</div>
+               </div>
             </div>
          </div>
-          <div class="map-icon-test icon" style="position:absolute;right:20vw;top:20vh;font-size:2em" data-activate="#recent-test-modal">
-            <img src="img/location.svg" alt="">
-         </div>
 
-
-         <div class="modal" id="recent-test-modal">
-            <div class="modal-popup small" data-deactivate="#recent-test-modal">
-               
-            </div>
-         </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
@@ -116,98 +148,144 @@
          </ul>
       </header>
       <div data-role="main"><div class="overscroll">
-                 <div class="search">
-            <form>
-               <input type="search" placeholder="Search">
-            </form>
 
-            <div class="sort" style=" background-color:#956753;color:white;border-radius:0.3em; width: 25%; ">
-               <select class="js-sort" style="text-align: center;">
-                  <option value="1">Newest</option>
-                  <option value="2">Oldest</option>
-               </select>
+         <div class="title" style="height: 14vh;">
+            <div class="search">
+               <form>
+                  <input type="search" placeholder="Search">
+               </form>
+
+          
+               <div class="sort">
+                  <select>
+                     <option value="1">Newest</option>
+                     <option value="2">Oldest</option>
+                  </select>
+         
+               </div>
             </div>
-               <p></p>
-             
          </div>
 
          <p></p>
 
-          <ul class="doglist" style="list-style-type: none;">
-               <li>
+         <div class="list-align">
+            <ul class="listCenter" style="list-style: none;">
+
+               <li class="back-card">
                   <a href="#animal-profile-page" style="display: flex; position: relative;">
-                     <img src="img/logo2.png" style="width: 150px;height: 150px">
-                     <div class="list-item-text">
-                        <h3>Dog name:</h3>
-                        <p>Breed:</p>
-                        <p>Hair Color:</p>
-                        <p>Location:</p>
-                     </div>
-                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
-                  </a>
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
                </li>
-               <li>
+               <li class="back-card">
                   <a href="#animal-profile-page" style="display: flex; position: relative;">
-                     <img src="img/logo2.png" style="width: 150px;height: 150px">
-                     <div class="list-item-text">
-                        <h3>Dog name:</h3>
-                        <p>Breed:</p>
-                        <p>Hair Color:</p>
-                        <p>Location:</p>
-                     </div>
-                  <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
-                  </a>
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
                </li>
-               <li>
+               <li class="back-card">
                   <a href="#animal-profile-page" style="display: flex; position: relative;">
-                     <img src="img/logo2.png" style="width: 150px;height: 150px">
-                     <div class="list-item-text">
-                        <h3>Dog name:</h3>
-                        <p>Breed:</p>
-                        <p>Hair Color:</p>
-                        <p>Location:</p>
-                     </div>
-                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
-                  </a>
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                             <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
                </li>
-               <li>
+               <li class="back-card">
                   <a href="#animal-profile-page" style="display: flex; position: relative;">
-                     <img src="img/logo2.png" style="width: 150px;height: 150px">
-                     <div class="list-item-text">
-                        <h3>Dog name:</h3>
-                        <p>Breed:</p>
-                        <p>Hair Color:</p>
-                        <p>Location:</p>
-                     </div>
-                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
-                  </a>
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
                </li>
-               <li>
+               <li class="back-card">
                   <a href="#animal-profile-page" style="display: flex; position: relative;">
-                     <img src="img/logo2.png" style="width: 150px;height: 150px">
-                     <div class="list-item-text">
-                        <h3>Dog name:</h3>
-                        <p>Breed:</p>
-                        <p>Hair Color:</p>
-                        <p>Location:</p>
-                     </div>
-                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
-                  </a>
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
                </li>
-               <li>
+               <li class="back-card">
                   <a href="#animal-profile-page" style="display: flex; position: relative;">
-                     <img src="img/logo2.png" style="width: 150px;height: 150px">
-                     <div class="list-item-text">
-                        <h3>Dog name:</h3>
-                        <p>Breed:</p>
-                        <p>Hair Color:</p>
-                        <p>Location:</p>
-                     </div>
-                     <img src="img/can.svg" style="width: 80px; height:40px;position: absolute; right: 3%; top: 30%;">
-                  </a>
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
                </li>
-        
+               <li class="back-card">
+                  <a href="#animal-profile-page" style="display: flex; position: relative;">
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                             <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
+               </li>
+               <li class="back-card">
+                  <a href="#animal-profile-page" style="display: flex; position: relative;">
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
+               </li>
+               <li class="back-card">
+                  <a href="#animal-profile-page" style="display: flex; position: relative;">
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
+               </li>
+               <li class="back-card">
+                  <a href="#animal-profile-page" style="display: flex; position: relative;">
+                  <div class="list-item"><img src="img/ha.jpg"></div>
+                  <div class="list-item-text">
+                              <h3>Dog name:</h3>
+                              <p>Breed:</p>
+                              <p>Location:</p>
+                           </div>
+                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
+                        </a>
+               </li>
             </ul>
+            </div>
+
+         
 
       </div></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
@@ -224,10 +302,6 @@
                <div class="form-control">
                   <label for="list-add-name" class="form-label">Name</label>
                   <input class="form-input" type="text" id="list-add-name" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-type" class="form-label">Type</label>
-                  <input class="form-input" type="text" id="list-add-type" data-role="none">
                </div>
                <div class="form-control">
                   <label for="list-add-breed" class="form-label">Breed</label>
@@ -299,7 +373,7 @@
 
 <!-- dog detail profile -->
 
-   <section data-role="page" id="animal-profile-page">
+   <section data-role="page" id="animal-profile-page"> <div class="overscroll">
       <header data-role="header" style="background-color:#351c11; height: 10vh;">
         
         
@@ -312,12 +386,6 @@
             <li><a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back.png" class="back" alt=""></a></li>
          </ul>
          </header>
-         <div data-role="main">
-            <div class="search">
-            <form>
-               <input type="search" placeholder="Search">
-            </form>
-         </div>
 
             <p></p>
             <div class="edit" style="float: right;padding:1em;">
@@ -325,30 +393,44 @@
 
             </div>
 
-            <form action="" id="profile-form" data-ajax="false" class="form" style="padding:1em;">
-               <div class="form-control">
-                  <label for="signin-username" class="form-label">Name</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
+            <p></p>
+
+
+            <div class="animal-top">
+
+         <div class="detailll">
+            <img src="img/ha.jpg" style="position:relative;max-width: 100%;margin:1em; width: 93%;">
+         </div>
+      </div>
+
+
+
+         <div class="animal-info" style="margin:1em;">
+               <div style="margin: 2em ">
+                   <h1>Dog Name:</h1>
+                   <p>HAHA</p>
+
+                   <h2> Type:</h2>
+                   <p>Husky</p>
+                   <h2> Color:</h2>
+                   <p>Black and white hair</p>
+                   <h2> Location:</h2>
+                   <p>Park </p>
+
+                   <h3> Description </h3>
+                   <p>
+                      Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Repudiandae, voluptates, nesciunt. Suscipit cum, quaerat saepe totam praesentium nobis tempore veniam facilis laboriosam debitis a repellendus quae aspernatur dignissimos libero unde!
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nulla vero doloremque laboriosam alias esse natus accusamus omnis harum nihil eaque molestias nesciunt, impedit error laborum iusto similique, deserunt, dicta.
+                   </p>
                </div>
-               <div class="form-control">
-                  <label for="signin-username" class="form-label">Breed</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-                <div class="form-control">
-                  <label for="signin-username" class="form-label">Hair Color</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="signin-username" class="form-label">Location</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-            </form>
+            </div>
+         
              
 
               <div class="form-control" style="width: 30%; margin:0 auto;">
                   <input type="submit" class="form-button signin-button" value="Save" data-role="none">
                </div>
-                </div>
+               </div></div></div>
    </section>
 
 

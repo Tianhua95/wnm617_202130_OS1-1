@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Brittany Neal",
+    "username": "user1",
+    "email": "user1@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/713/fff/?text=user1",
+    "date_create": "2020-09-14 09:07:55"
+  },
+  {
+    "id": 2,
+    "name": "Sasha Dillon",
+    "username": "user2",
+    "email": "user2@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/724/fff/?text=user2",
+    "date_create": "2021-01-09 08:33:08"
+  },
+  {
+    "id": 3,
+    "name": "Nellie Marquez",
+    "username": "user3",
+    "email": "user3@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/887/fff/?text=user3",
+    "date_create": "2020-01-30 02:54:47"
+  },
+  {
+    "id": 4,
+    "name": "Mcintosh Justice",
+    "username": "user4",
+    "email": "user4@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/805/fff/?text=user4",
+    "date_create": "2020-10-26 12:30:02"
+  },
+  {
+    "id": 5,
+    "name": "Nelda Gutierrez",
+    "username": "user5",
+    "email": "user5@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/839/fff/?text=user5",
+    "date_create": "2020-01-09 10:28:34"
+  },
+  {
+    "id": 6,
+    "name": "Pruitt Gallegos",
+    "username": "user6",
+    "email": "user6@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/897/fff/?text=user6",
+    "date_create": "2020-01-13 12:39:09"
+  },
+  {
+    "id": 7,
+    "name": "Craig Wells",
+    "username": "user7",
+    "email": "user7@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/875/fff/?text=user7",
+    "date_create": "2020-04-17 02:29:40"
+  },
+  {
+    "id": 8,
+    "name": "Mccoy Rivera",
+    "username": "user8",
+    "email": "user8@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/980/fff/?text=user8",
+    "date_create": "2020-11-18 04:19:37"
+  },
+  {
+    "id": 9,
+    "name": "Buck Keith",
+    "username": "user9",
+    "email": "user9@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/988/fff/?text=user9",
+    "date_create": "2020-04-23 05:02:08"
+  },
+  {
+    "id": 10,
+    "name": "Reyna Sparks",
+    "username": "user10",
+    "email": "user10@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/764/fff/?text=user10",
+    "date_create": "2020-08-14 10:33:59"
+  }
+]

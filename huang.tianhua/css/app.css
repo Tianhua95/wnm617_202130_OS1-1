@@ -16,7 +16,7 @@
    --color-neutral-dark:#351c11;
 
    --color-main-light:#edd8b9;
-   --color-main-medium:#4ba0a8;
+   --color-main-medium:#956753;
    --color-main-dark:#0a4349;
 
    --color-white:#fff;
@@ -384,5 +384,69 @@ a.js-list-add-animal.ui-link {
 img.back {
     height: 30px;
     width: 20px;
-    margin-top: 10px;
+    margin-top: 10px;}
 
+
+.search form {
+    border-radius: 1em;
+    background-color: var(--color-main-medium);
+    margin:1em;
+
+}
+.ui-input-search.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear {
+    color: var(--color-main-medium);
+    border-radius: 1em;
+}
+
+.sort {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+
+.sort .ui-select {
+    background-color: #956753;
+    color: white;
+    border-radius: 1em;
+    margin-left: 3%;
+}
+
+
+/*list*/
+
+.list-item img {
+    max-width: 7em;
+}
+
+.back-card {
+    background-color: var(--color-neutral-light);
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1em;
+}
+.list-align {
+    padding: 0;
+    margin: 1em;
+}
+
+ul.listCenter {
+    padding: 0;
+}
+.list-item-text {
+    margin-left: 8%;
+
+} 
+.list-item-text h3 {
+    margin: 1vh 0;
+    font-weight: 600;
+    color:#fff1dc;
+}
+.list-item-text p {
+    margin: 0;
+    font-weight: 400;
+    color:#fff1dc;
+}
