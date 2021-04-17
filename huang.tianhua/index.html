@@ -11,6 +11,9 @@
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
+   <script src="js/functions.js"></script>
+   <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
@@ -127,7 +130,8 @@
          <div class="modal" id="recent-test-modal">
             <div class="modal-popup small"data-deactivate="#recent-test-modal">
               <div class="modal-body">
-                  <div class="profile-username">This is one record</div>
+                  <div class="card display-number"><p>Husky</p></div>
+                  <div class="card display-number"><p>Powll street</p></div>
                </div>
             </div>
          </div>
@@ -168,7 +172,9 @@
 
          <p></p>
 
-         <div class="list-align">
+         <div class="animallist"></div>
+
+         <!-- <div class="list-align">
             <ul class="listCenter" style="list-style: none;">
 
                <li class="back-card">
@@ -284,7 +290,7 @@
                </li>
             </ul>
             </div>
-
+ -->
          
 
       </div></div>
@@ -325,20 +331,16 @@
 <section data-role="page" id="user-profile-page">
 
    <div class="overscroll">
-       <header data-role="header" style=" border-radius: 50%; width: 250px;
-            height: 250px; padding:1em; background-color:#351c11; margin:0 auto;">
-         <div class="profile" style="color:white;font-size: 2em;text-align: center;">
-         <h2>Profile</h2>
-         </div>
-      </header>
+   <div class="profile"></div>
+      
 
       <div data-role="main" style="padding:1em">
 
-         <div class="profile-username" style="text-align: center; font-size:2.5em; color:#351c11;">Username</div>
+        <hr>
          
 
             <form action="" id="profile-form" data-ajax="false" class="form">
-               <div class="form-control">
+              <!--  <div class="form-control">
                   <label for="signin-username" class="form-label">First Name</label>
                   <input class="form-input" type="text" id="signin-username" data-role="none">
                </div>
@@ -353,7 +355,7 @@
                <div class="form-control">
                   <label for="signin-password" class="form-label">Password</label>
                   <input class="form-input" type="password" id="signin-password" data-role="none">
-               </div>
+               </div> -->
                <div class="form-control" style="overflow: hidden; margin: 1.5em 0;">
                   <a href="#profile-page" class="form-button signin-button"style="float: right; width: 30%;">Save</a>
 
@@ -361,7 +363,7 @@
 
                </div>
             </form>
-      </div></div>
+      </div></div></div>
 
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
@@ -373,64 +375,98 @@
 
 <!-- dog detail profile -->
 
-   <section data-role="page" id="animal-profile-page"> <div class="overscroll">
-      <header data-role="header" style="background-color:#351c11; height: 10vh;">
-        
-        
-         
-          <h1 class="list-title" style="color: white; font-size: 2em; text-align: center;">Dog Profile</h1>
-
-
-
-         <ul>
-            <li><a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back.png" class="back" alt=""></a></li>
-         </ul>
-         </header>
-
-            <p></p>
-            <div class="edit" style="float: right;padding:1em;">
-            <a href="#add-new-page">Edit</a>
-
-            </div>
-
-            <p></p>
-
-
-            <div class="animal-top">
-
-         <div class="detailll">
-            <img src="img/ha.jpg" style="position:relative;max-width: 100%;margin:1em; width: 93%;">
-         </div>
-      </div>
-
-
-
-         <div class="animal-info" style="margin:1em;">
-               <div style="margin: 2em ">
-                   <h1>Dog Name:</h1>
-                   <p>HAHA</p>
-
-                   <h2> Type:</h2>
-                   <p>Husky</p>
-                   <h2> Color:</h2>
-                   <p>Black and white hair</p>
-                   <h2> Location:</h2>
-                   <p>Park </p>
-
-                   <h3> Description </h3>
-                   <p>
-                      Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Repudiandae, voluptates, nesciunt. Suscipit cum, quaerat saepe totam praesentium nobis tempore veniam facilis laboriosam debitis a repellendus quae aspernatur dignissimos libero unde!
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nulla vero doloremque laboriosam alias esse natus accusamus omnis harum nihil eaque molestias nesciunt, impedit error laborum iusto similique, deserunt, dicta.
-                   </p>
-               </div>
-            </div>
-         
+  <!--  <section data-role="page" id="animal-profile-page"> <div class="overscroll">
+       <div data-role="main" class="display-flex flex-vertical"> -->
+     <!--  <div class="animal-top">
+ 
+      <header data-role="headerr">
              
+        
+         
+          <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;">Dog Profile</h1>
 
-              <div class="form-control" style="width: 30%; margin:0 auto;">
+         <span>
+         <div class="backicon" style="margin-top: -4em; ">
+         <a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back 2.png" class="back" alt=""></a>
+         </span></div>
+         <span>
+            <div class="edit" style="margin-top: -4em; ">
+               <a href="#" class="edit" data-rel="back" style="float:right;color:white;    margin-right: 0.5em;">Edit</a></li>
+
+            </div>
+          </span>
+       </header></div> -->
+
+     <!-- <div class="header animal-nav">
+            <ul>
+               <li class="flex-stretch"><a href="#">map</a></li>
+               <li class="flex-stretch"><a href="#">info</a></li>
+            </ul>
+         </div>
+         <div class="animal-bottom">
+            <div class="animal-bottom-section animal-map map"></div>
+            <div class="animal-bottom-section animal-info"></div>
+         </div>
+ -->
+
+
+
+   <section data-role="page" id="animal-profile-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="animal-top">
+             <header data-role="headerr">
+             
+        
+         
+          <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;">Dog Profile</h1>
+
+         <span>
+         <div class="backicon" style="margin-top: -4em; ">
+         <a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back 2.png" class="back" alt=""></a>
+         </span></div>
+         <span>
+            <div class="edit" style="margin-top: -4em; ">
+               <a href="#" class="edit" data-rel="back" style="float:right;color:white;    margin-right: 0.5em;">Edit</a></li>
+
+            </div>
+          </span>
+       </header>
+            <!-- <div class="floater top left header no-touch" style="background-image: linear-gradient(180deg, #ffffff96, #ffffff00);">
+               <ul>
+                  <li class="flex-none do-touch"><a href="#" data-rel="back">Back</a></li>
+                  <li class="flex-stretch"></li>
+                  <li class="flex-none do-touch"><a href="#">Edit</a></li>
+               </ul>
+            </div> -->
+         </div>
+         <div class="header animal-nav">
+            <ul class="details" style=" padding: 0;">
+               <li class="flex-stretch" style="color:white"><a href="#">Map</a></li>
+               <li class="flex-stretch" style="color:white"><a href="#">About</a></li>
+            </ul>
+         </div>
+         <div class="animal-bottom">
+            <div class="animal-bottom-section animal-map map">
+               
+            </div>
+            <div class="animal-bottom-section animal-info">
+               <div class="form-control" style="width: 30%; margin:0 auto;">
                   <input type="submit" class="form-button signin-button" value="Save" data-role="none">
                </div>
-               </div></div></div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+  <!--        <div class="animal-info" style="margin:1em;"></div> -->
+             
+
+              
+      </div>
+   </div>
+</div>
+</div>
    </section>
 
 

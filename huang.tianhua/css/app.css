@@ -376,14 +376,10 @@ a.js-list-add-animal.ui-link {
     text-decoration: none;
 }
 
-/*img{
-  width: 45px;
-  height: 45px;
-}
-*/
+
 img.back {
     height: 30px;
-    width: 20px;
+    width: 30px;
     margin-top: 10px;}
 
 
@@ -450,3 +446,185 @@ ul.listCenter {
     font-weight: 400;
     color:#fff1dc;
 }
+
+
+/*----------------------------------------------*/
+
+
+
+
+/* remove this later */
+.map,
+#recent-page [data-role='main'] {
+  background-image: url('../img/map.png');
+  background-position:center;
+  background-size:cover;
+}
+
+
+
+
+
+
+
+/* ANIMAL PROFILE PAGE */
+.animal-top {
+  flex:none;
+  height:40vh;
+  background-position:center;
+  background-size:cover;
+}
+
+.animal-nav li {
+    position: relative;
+    display: inline-block;
+    background-color:#956753;
+    width: 49%;
+    line-height: 2;
+    text-align: center;
+    font-size: 1.5em;
+}
+.animal-bottom {
+  flex:1 1 100%;
+  position:relative;
+  overflow:hidden;
+}
+.animal-bottom-section {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.animal-nav {
+  text-align:center;
+}
+
+.animal-nav li {
+  position:relative;
+}
+.animal-nav .active::after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background-color:var(--color-main-light);
+}
+.animal-bottom-section {
+  display:none;
+}
+.animal-bottom-section.active {
+  display:block;
+}
+
+.animallist-item {
+  font-weight:normal;
+  margin: 1em;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+.animallist-image img{
+  width:100px;
+  height:100px;
+  vertical-align: middle;
+}
+.animallist-description {
+  padding:1em;
+}
+.animallist-name {
+  font-size:1.3em;
+}
+
+
+
+
+
+
+
+
+.user-profile-image {
+  text-align: center;
+  padding: 2em;
+}
+.user-profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+
+.user-profile-description {
+    text-align: center;
+    background-color: var(--color-neutral-light);
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    width: 90%;
+    margin-left: 1.1em;
+
+  }
+
+
+[data-role="headerr"] {
+   flex: none;
+   height: var(--header-height);
+   line-height: var(--header-height);
+   border-width:0;
+   box-shadow:0 0 5px rgba(0,0,0,0.2);
+   position:relative;
+   overflow:hidden;
+}
+
+
+hr {
+    border: 8px solid #956753;
+}
+.mid{
+  background-color: white;
+  line-height: 3rem;
+}
+.user-profile-email {
+    font-size: 1em;
+    text-align: center;
+    color:white;
+    padding-bottom: 0.3em;
+}
+
+.user-profile-name {
+    font-size: 2.5em;
+    color:white;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+}
+
+.animal-name{
+    font-size: 2.5em;
+    text-align: center;
+    color:white;
+    padding-bottom: 0.2em;
+    background-color:#b58b6c;
+    margin-bottom: 1em;
+}
+.animal-type{
+    font-size: 2.5em;
+    text-align: center;
+    color:white;
+    padding-bottom: 0.2em;
+    background-color:#b58b6c;
+    margin-bottom: 1em;
+}
+.animal-breed{
+   font-size: 2.5em;
+    text-align: center;
+    color:white;
+    padding-bottom: 0.2em;
+    background-color:#b58b6c;
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
