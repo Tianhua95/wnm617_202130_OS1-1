@@ -3,9 +3,18 @@ const makeAnimalList = templater(o=>`
 <div class="animallist-item display-flex animal-jump" data-id="${o.id}">
    <div class="flex-none animallist-image"><img src="${o.img}" alt=""></div>
    <div class="animallist-description flex-stretch">
-      <div class="animallist-name">${o.name}</div>
-      <div class="animallist-info">${o.type}, ${o.breed}</div>
+      <div class="animallist-name">
+      <p>Users: <span>${o.name}</span></p></div>
+      <div class="animallist-info">
+      			<p>Type: <span>${o.type}</span></p>
+				<p>Breed: <span>${o.breed}</span></p>
+				<span>
+                     <img src="img/can.svg" style="width: 2em; right: 7%; top: 30%;">
+                  </span>
+				</div>
+	
    </div>
+
    
 </div>
 `);

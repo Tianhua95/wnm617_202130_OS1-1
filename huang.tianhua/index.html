@@ -164,7 +164,9 @@
                   <select>
                      <option value="1">Newest</option>
                      <option value="2">Oldest</option>
-                  </select>
+                  </select><!-- <span>
+                     <img src="img/can.svg" style="width: 2em; position: relative; right: 7%; top: 30%;">
+                  </span> -->
          
                </div>
             </div>
@@ -172,7 +174,9 @@
 
          <p></p>
 
-         <div class="animallist"></div>
+         <div class="animallist"><!-- <span>
+                     <img src="img/can.svg" style="width: 2em; position: relative; right: 7%; top: 30%;">
+                  </span> --></div>
 
          <!-- <div class="list-align">
             <ul class="listCenter" style="list-style: none;">
@@ -330,13 +334,48 @@
 
 <section data-role="page" id="user-profile-page">
 
+<div class="setting" style="z-index: 1">
+      <div class="floater top right" >
+            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/set.svg" alt=""></a>
+         </div>
+
+
+         <div class="modal" id="user-settings-modal">
+            <div class="modal-drawer right">
+               <div class="modal-head display-flex">
+                  <div class="flex-none">Settings</div>
+                  <div class="flex-stretch"></div>
+                  <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
+               </div>
+               <div class="modal-body"><div class="overscroll">
+                  <ul>
+                     <li>Change Name</li>
+                     <li>Change Password</li>
+                     <li><a href="#" class="js-logout">Sign Out</a></li>
+                     
+                  </ul>
+                  <div class="foot0" style="padding:1em">
+                      <img src="img/foot.png" alt=""> 
+                        </div>
+                          <div class="foot1" style="padding:1em;">
+                      <img src="img/foot.png" alt=""> 
+                        </div>
+                         <div class="foot2" style="padding:1em">
+                      <img src="img/foot.png" alt=""> 
+                        </div>
+               </div>
+               </div>
+            </div>
+         </div>
+   </div>
+
    <div class="overscroll">
    <div class="profile"></div>
       
 
       <div data-role="main" style="padding:1em">
 
-        <hr>
+        <hr> 
          
 
             <form action="" id="profile-form" data-ajax="false" class="form">

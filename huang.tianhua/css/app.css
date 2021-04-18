@@ -623,8 +623,32 @@ hr {
     margin-bottom: 1em;
 }
 
+.flex-none.animallist-image {
+    margin: 1em;
+    padding-top: 1em;
+}
 
+.foot0>img {
+    opacity: 0.1;
+    float: right;
+    transform: rotate(230deg);
+    margin-right: 1%;
+}
 
+.foot1>img {
+    opacity: 0.1;
+    float: left;
+    transform: rotate(33deg);
+    margin-right: 1%;
+   margin-top: 5em;
+}
 
+.foot2>img {
+    opacity: 0.1;
+    float: right;
+    transform: rotate(314deg);
+    margin-right: 1%;
+    margin-top: 15em;
+}
 
 
