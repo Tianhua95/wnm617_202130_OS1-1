@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dog Tracker</title>
+   <title>Animal Tracker</title>
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
@@ -12,31 +11,36 @@
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
    <script src="js/functions.js"></script>
+   <script src="js/maps.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
+     <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2_STMTmZdBAhWgC2YqMkB3CkxTgz4p7M&libraries=&v=weekly"
+      async
+    ></script>
+
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
 
     <link href="https://fonts.font.im/css?family=Cabin" rel="stylesheet">
 
 </head>
 <body>
 
-<!-- sign in -->
+<!-- ----sigin---- -->
+
    <section data-role="page" id="signin-page"> <div class="overscroll">
+      <div data-role="main" class="display-flex flex-vertical">
 
       <div class="logo" style="padding:1em">
       <img src="img/logo.png" alt=""> 
 
       <h1 class=appname>Woof woof</h1>
 
-      </div>
-      
-      
-
-      <div data-role="main" class="display-flex flex-vertical"><span>
+      </div><span>
          <div class="foot" style="padding:1em">
          <img src="img/foot.png" alt=""> 
       </div>
@@ -47,6 +51,8 @@
                   <h3>Sign in to your account</h3>
                </div>
   </span> 
+         <div class="flex-stretch"></div>
+         <div class="flex-none">
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
                   <label for="signin-username" class="form-label">Username</label>
@@ -56,35 +62,32 @@
                   <label for="signin-password" class="form-label">Password</label>
                   <input class="form-input" type="password" id="signin-password" data-role="none">
                </div>
-               <div class="form-control">
-                  <div class="flex-none">
-                      <span>
+                    <span>
                   <label class="keep">Keep me signed in
                      <input type="checkbox">
                   </label>
                   </span>
-               <div class="flex-stretch"></div>
-               <p></p>
-               <div class="flex-none">
-                  <input type="submit" class="form-button signin-button" value="Sign In" data-role="none">
-               </div>
-               </div>
+               <div class="form-control">
+                  <input type="submit" class="form-button" value="Sign In" data-role="none">
                </div>
             </form>
-            <div class="register" style="text-align: center;">
+
+
+             <div class="register" style="text-align: center;">
                   <p>Don't have an account? <a href="#register-page">Register One</a></p>
                </div>
 
          </div>
-      </div></div>
-   </section>
+      </div>
+   </section></div>
 
-   <!-- sign up page -->
+
+      <!-- sign up page -->
    <section data-role="page" id="register-page">
       <div data-role="main" class="display-flex flex-vertical">
 
          <div>
-            <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+            <form class="form" id="signup-form" data-ajax="false" style="padding:1em">
                <div class="welcome">
                <h1>CREATE ACCOUNT</h1>
                <p>Please Fill In your details</p>
@@ -107,6 +110,7 @@
                   <label for="signin-password" class="form-label">Password</label>
                   <input class="form-input" type="password" id="signup-password" data-role="none">
                </div>
+
                <div class="welcome">
                <p>Already have an Account?</p> <span>
                <a href="#signin-page"><h4>SIGN IN</h4></a></span>
@@ -119,28 +123,23 @@
    </section>
 
 
-<!-- map -->
+
+
+<!-- -----map----- -->
+
    <section data-role="page" id="recent-page">
       <div data-role="main">
-         <div class="map-icon-test icon" style="position:absolute;left:20vw;top:40vh;font-size:2em" data-activate="#recent-test-modal">
-            <img src="img/location.svg" alt="">
-         </div>
-
-
-         <div class="modal" id="recent-test-modal">
-            <div class="modal-popup small"data-deactivate="#recent-test-modal">
-              <div class="modal-body">
-                  <div class="card display-number"><p>Husky</p></div>
-                  <div class="card display-number"><p>Powll street</p></div>
-               </div>
-            </div>
-         </div>
-
+         <div class="map"></div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
-<!-- dog list -->
+
+
+
+
+<!-- -----list----- -->
+
    <section data-role="page" id="list-page">
       <header data-role="header" style="background-color:#351c11; height: 10vh;">
         
@@ -148,7 +147,7 @@
          <ul>
             <li class="flex-stretch"></li>
             <li><a href="#" class="js-list-add-animal"
-               data-activate="#list-add-modal">&plus;</a></li>
+               data-activate="#list-add-modal" style="color: white;font-size: 2em;margin-top: 10px;text-decoration: none;">&plus;</a></li>
          </ul>
       </header>
       <div data-role="main"><div class="overscroll">
@@ -156,7 +155,7 @@
          <div class="title" style="height: 14vh;">
             <div class="search">
                <form>
-                  <input type="search" placeholder="Search">
+                  <input class="text" type="search" placeholder="Search" >
                </form>
 
           
@@ -164,9 +163,7 @@
                   <select>
                      <option value="1">Newest</option>
                      <option value="2">Oldest</option>
-                  </select><!-- <span>
-                     <img src="img/can.svg" style="width: 2em; position: relative; right: 7%; top: 30%;">
-                  </span> -->
+                  </select>
          
                </div>
             </div>
@@ -174,145 +171,23 @@
 
          <p></p>
 
-         <div class="animallist"><!-- <span>
-                     <img src="img/can.svg" style="width: 2em; position: relative; right: 7%; top: 30%;">
-                  </span> --></div>
-
-         <!-- <div class="list-align">
-            <ul class="listCenter" style="list-style: none;">
-
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                             <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                             <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-               <li class="back-card">
-                  <a href="#animal-profile-page" style="display: flex; position: relative;">
-                  <div class="list-item"><img src="img/ha.jpg"></div>
-                  <div class="list-item-text">
-                              <h3>Dog name:</h3>
-                              <p>Breed:</p>
-                              <p>Location:</p>
-                           </div>
-                  <img src="img/can.svg" style="width: 2em; position: absolute; right: 2%; top: 30%;">
-                        </a>
-               </li>
-            </ul>
-            </div>
- -->
-         
-
+         <div class="animallist"></div>
       </div></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
 
 
-<!-- add new -->
+
 
       <div class="modal" id="list-add-modal">
-         <div class="overscroll">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form class="modal-popup" data-ajax="false" id="list-add-form">
-            <div class="modal-head">Dog</div>
+            <div class="modal-head">little Cute</div>
             <div class="modal-body">
                <div class="form-control">
-                  <label for="list-add-name" class="form-label">Name</label>
+                  <label for="list-add-name" class="form-label">Nickname</label>
                   <input class="form-input" type="text" id="list-add-name" data-role="none">
                </div>
+
                <div class="form-control">
                   <label for="list-add-breed" class="form-label">Breed</label>
                   <input class="form-input" type="text" id="list-add-breed" data-role="none">
@@ -325,14 +200,98 @@
                </div>
             </div>
          </form>
-      </div></div>
+      </div>
    </section>
 
 
 
-<!-- profile -->
+   <!--  ANIMAL DATA SECTION -->
 
-<section data-role="page" id="user-profile-page">
+   <section data-role="page" id="animal-profile-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="animal-top">
+
+          <header data-role="headerr">
+             
+        
+         
+          <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;">Dog Profile</h1>
+
+         <span>
+         <div class="backicon" style="margin-top: -4em; ">
+         <a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back 2.png" class="back" alt=""></a>
+         </span></div>
+         <span>
+            <div class="edit" style="margin-top: -4em; ">
+               <a href="#animal-edit-page" class="edit" style="float:right;color:white;    margin-right: 0.5em;">Edit</a></li>
+
+            </div>
+          </span>
+       </header>
+         </div>
+         <div class="header animal-nav">
+            <ul>
+               <li class="flex-stretch"><a href="#">Map</a></li>
+               <li class="flex-stretch"><a href="#">Info</a></li>
+            </ul>
+         </div>
+         <div class="animal-bottom">
+            <div class="animal-bottom-section animal-map map"></div>
+            <div class="animal-bottom-section animal-info"></div>
+         </div>
+      </div>
+   </section>
+
+   <section data-role="page" id="animal-edit-page">
+      <header data-role="header2">
+         <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;">Edit Animal</h1>
+
+           <span>
+         <div class="backicon" style="margin-top: -4em; ">
+         <a href="#" data-rel="back" style="color:white;float:left;"class="back" alt=""> Cancle</a>
+         </span></div>
+         <span>
+            <div class="edit" style="margin-top: -4em; ">
+               <a href="#" class="edit" data-rel="back"style="float:right;color:white;    margin-right: 0.5em;">Save</a></li>
+
+            </div>
+          </span>
+        <!--  <ul>
+            <li><a href="#" class="back" data-rel="back" style="color:white;float:left;">Cancel</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="saveback" data-rel="back" style="float:right;color:white;    margin-right: 0.5em;">Save</a></li>
+         </ul> -->
+      </header>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="overscroll">
+            <form>
+               <div class="form-control">
+                  <label for="animal-edit-name" class="form-label">Name</label>
+                  <input class="form-input" type="text" id="animal-edit-name" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="animal-edit-type" class="form-label">Location</label>
+                  <input class="form-input" type="text" id="animal-edit-type" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="animal-edit-breed" class="form-label">Breed</label>
+                  <input class="form-input" type="text" id="animal-edit-breed" data-role="none">
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+   <!-- USER DATA SECTION -->
+
+ <section data-role="page" id="user-profile-page">
 
 <div class="setting" style="z-index: 1">
       <div class="floater top right" >
@@ -379,22 +338,7 @@
          
 
             <form action="" id="profile-form" data-ajax="false" class="form">
-              <!--  <div class="form-control">
-                  <label for="signin-username" class="form-label">First Name</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="signin-username" class="form-label">Last Name</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="signin-email" class="form-label">Email</label>
-                  <input class="form-input" type="email" id="signin-email" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="signin-password" class="form-label">Password</label>
-                  <input class="form-input" type="password" id="signin-password" data-role="none">
-               </div> -->
+  
                <div class="form-control" style="overflow: hidden; margin: 1.5em 0;">
                   <a href="#profile-page" class="form-button signin-button"style="float: right; width: 30%;">Save</a>
 
@@ -412,107 +356,18 @@
 
 
 
-<!-- dog detail profile -->
-
-  <!--  <section data-role="page" id="animal-profile-page"> <div class="overscroll">
-       <div data-role="main" class="display-flex flex-vertical"> -->
-     <!--  <div class="animal-top">
- 
-      <header data-role="headerr">
-             
-        
-         
-          <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;">Dog Profile</h1>
-
-         <span>
-         <div class="backicon" style="margin-top: -4em; ">
-         <a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back 2.png" class="back" alt=""></a>
-         </span></div>
-         <span>
-            <div class="edit" style="margin-top: -4em; ">
-               <a href="#" class="edit" data-rel="back" style="float:right;color:white;    margin-right: 0.5em;">Edit</a></li>
-
-            </div>
-          </span>
-       </header></div> -->
-
-     <!-- <div class="header animal-nav">
-            <ul>
-               <li class="flex-stretch"><a href="#">map</a></li>
-               <li class="flex-stretch"><a href="#">info</a></li>
-            </ul>
-         </div>
-         <div class="animal-bottom">
-            <div class="animal-bottom-section animal-map map"></div>
-            <div class="animal-bottom-section animal-info"></div>
-         </div>
- -->
-
-
-
-   <section data-role="page" id="animal-profile-page">
-      <div data-role="main" class="display-flex flex-vertical">
-         <div class="animal-top">
-             <header data-role="headerr">
-             
-        
-         
-          <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;">Dog Profile</h1>
-
-         <span>
-         <div class="backicon" style="margin-top: -4em; ">
-         <a href="#" data-rel="back" style="color:white;float:left;"><img src="img/back 2.png" class="back" alt=""></a>
-         </span></div>
-         <span>
-            <div class="edit" style="margin-top: -4em; ">
-               <a href="#" class="edit" data-rel="back" style="float:right;color:white;    margin-right: 0.5em;">Edit</a></li>
-
-            </div>
-          </span>
-       </header>
-            <!-- <div class="floater top left header no-touch" style="background-image: linear-gradient(180deg, #ffffff96, #ffffff00);">
-               <ul>
-                  <li class="flex-none do-touch"><a href="#" data-rel="back">Back</a></li>
-                  <li class="flex-stretch"></li>
-                  <li class="flex-none do-touch"><a href="#">Edit</a></li>
-               </ul>
-            </div> -->
-         </div>
-         <div class="header animal-nav">
-            <ul class="details" style=" padding: 0;">
-               <li class="flex-stretch" style="color:white"><a href="#">Map</a></li>
-               <li class="flex-stretch" style="color:white"><a href="#">About</a></li>
-            </ul>
-         </div>
-         <div class="animal-bottom">
-            <div class="animal-bottom-section animal-map map">
-               
-            </div>
-            <div class="animal-bottom-section animal-info">
-               <div class="form-control" style="width: 30%; margin:0 auto;">
-                  <input type="submit" class="form-button signin-button" value="Save" data-role="none">
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-
-  <!--        <div class="animal-info" style="margin:1em;"></div> -->
-             
-
-              
-      </div>
-   </div>
-</div>
-</div>
-   </section>
 
 
 
 
 
- <script type="text/template" id="footer-template">
+
+
+
+
+
+
+   <script type="text/template" id="footer-template">
    <ul class="title-icons">
       <li><a href="#recent-page">
          <span class="icon"><img src="img/location.svg" alt=""></span>

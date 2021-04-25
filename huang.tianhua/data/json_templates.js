@@ -1,3 +1,6 @@
+// https://json-generator.com
+// https://konbert.com/convert
+
 
 // USERS DATA
 [
@@ -30,11 +33,12 @@
     
     name: '{{company()}}',
     
-    type: "dog",
+    type: '{{random("dog","cat","horse")}}',
     breed: function(tags) {
       var breeds = {
-        dog:["husky","alaskan","corgi","german shepherd","poodle","spotty","akita","shiba","teddy"]
-        
+        dog:["labrador","pitbull","dachsund"],
+        cat:["calico","ginger","tuxedo","siamese"],
+        horse:["shetland","andalusian","unicorn"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);
@@ -52,8 +56,6 @@
 
 
 
-
-
 // LOCATIONS DATA
 [
   '{{repeat(250)}}',
@@ -61,8 +63,8 @@
     id: '{{index(1)}}',
     animal_id: '{{integer(1,50)}}',
     
-    lat: '{{floating(37.805903, 37.702081)}}',
-    lng: '{{floating(-122.527977, -122.345775)}}',
+    lat: '{{floating(37.800351, 37.701135)}}',
+    lng: '{{floating(-122.511433, -122.386382)}}',
     
     description: '{{lorem(3,"sentences")}}',
     photo: 'https://via.placeholder.com/400/',

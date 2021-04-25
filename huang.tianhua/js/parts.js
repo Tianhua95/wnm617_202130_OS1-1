@@ -24,14 +24,26 @@ const makeUserProfile = o => `
 <div class="user-profile-image">
    <img src="${o.img}" alt="">
 </div>
+
+<div class="user-profile-name1"><p>User:</p></div>
 <div class="user-profile-description">
    <div class="user-profile-name">${o.name}</div>
+
+</div>
+
+<div class="user-profile-email1"><p>Email: </></div>
+<div class="user-profile-description">
    <div class="user-profile-email">${o.email}</div>
 </div>
 `;
 
 const makeAnimalInfo = o => `
+<div class="animal-name1"><p>Nickname:</p></div>
 <div class="animal-name">${o.name}</div>
+
+<div class="animal-type1"><p>Type:</p></div>
 <div class="animal-type">${o.type}</div>
+
+<div class="animal-breed1"><p>Breed:</p></div>
 <div class="animal-breed">${o.breed}</div>
 `;
