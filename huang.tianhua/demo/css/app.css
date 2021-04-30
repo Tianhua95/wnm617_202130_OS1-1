@@ -288,6 +288,18 @@ a:hover {
 
 
 
+.modal-drawer.modal-card {
+  padding:1em;
+  box-shadow:none;
+}
+.modal-card .modal-body {
+  box-shadow:0 0 5px rgba(0,0,0,0.3);
+  border-radius:1em;
+}
+
+
+
+
 .modal-head,
 .modal-foot {
   background-color:var(--color-neutral-light);
@@ -351,6 +363,22 @@ a:hover {
 
 
 
+.circle-button {
+  display:inline-block;
+  vertical-align:middle;
+  background-color:white;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+  border-radius:50%;
+  height:var(--header-height);
+  line-height:var(--header-height);
+  width:var(--header-height);
+  text-align:center;
+  font-size:2em;
+}
+
+
+
+
 
 
 /* remove this later */
@@ -361,9 +389,6 @@ a:hover {
   width:100%;
   height:100%;
 }
-
-
-
 
 
 
@@ -434,6 +459,24 @@ a:hover {
 }
 .animallist-name {
   font-size:1.3em;
+}
+
+
+
+
+.animal-image-thumb img {
+  width:6em;
+  height:6em;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+.animal-jump * {
+  pointer-events:none;
 }
 
 
