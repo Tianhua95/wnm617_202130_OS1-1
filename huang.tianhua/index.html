@@ -85,8 +85,17 @@
       <!-- sign up page -->
       <section data-role="page" id="signup-page">
       <div data-role="main" class="display-flex flex-vertical">
+          <div class="logo" style="padding:1em">
+      <img src="img/logo.png" alt=""> 
+
+      </div>
          <div class="flex-stretch"></div>
          <div class="flex-none">
+
+              <div class="welcome1" style="padding:1em">
+                  <h1>Sign up</h1>
+                  <h3>Please register your account</h3>
+               </div>
             <form class="form" id="signup-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
                   <label for="signup-email" class="form-label">Email</label>
@@ -100,6 +109,13 @@
                   <label for="signup-confirm" class="form-label">Confirm Password</label>
                   <input class="form-input" type="password" id="signup-confirm" data-role="none">
                </div>
+               
+                <span>
+                  <label class="keep">By creating an account you agree to the terms of use and our privacy policy.
+                     <input type="checkbox">
+                  </label>
+                  </span>
+
                <div class="form-control">
                   <input type="submit" class="form-button" value="Sign Up" data-role="none">
                </div>
@@ -114,8 +130,17 @@
 
    <section data-role="page" id="signup-second-page">
       <div data-role="main" class="display-flex flex-vertical">
+          <div class="logo" style="padding:1em">
+      <img src="img/logo.png" alt=""> 
+
+      </div>
          <div class="flex-stretch"></div>
          <div class="flex-none">
+
+              <div class="welcome1" style="padding:1em">
+                  <h1>Sign up</h1>
+                  <h3>Please register your account</h3>
+               </div>
             <form class="form" id="signup-second-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
                   <label for="signup-second-username" class="form-label">User Name</label>
@@ -125,6 +150,11 @@
                   <label for="signup-second-name" class="form-label">Name</label>
                   <input class="form-input" type="text" id="signup-second-name" data-role="none" placeholder="What is Your Real Name?">
                </div>
+                 <span>
+                  <label class="keep">By creating an account you agree to the terms of use and our privacy policy.
+                     <input type="checkbox">
+                  </label>
+                  </span>
                <div class="form-control">
                   <input type="submit" class="form-button" value="Finish Up" data-role="none">
                </div>
@@ -330,7 +360,7 @@
              
         
          
-          <h1 class="list-title" style="color: white; text-align: center;margin-top: -0;"> Profile Details</h1>
+          <h1 class="list-title" style="color: white; text-align: center;top:15%;"> Profile Details</h1>
 
          <span>
 
@@ -419,12 +449,12 @@
 
    <!-- CHOOSE LOCATION PAGES -->
    <section data-role="page" id="choose-animal-page">
-      <header data-role="header">
-         <h1>Choose Animal</h1>
+      <header data-role="header" style="background-color: #351c11;height: 10vh;">
+         <h1 style="color:white; font-size:1.5em; top:15%;">Choose Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Cancel</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#choose-location-page">Next</a></li>
+            <li><a href="#choose-location-page" style="color:white;padding-top:25%;">Next</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -438,12 +468,12 @@
    </section>
 
    <section data-role="page" id="choose-location-page">
-      <header data-role="header">
-         <h1>Choose Location</h1>
+      <header data-role="header" style="background-color: #351c11;height: 10vh;">
+         <h1 style="color:white; font-size:1.5em; top:15%;">Choose Location</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#location-description-page">Next</a></li>
+            <li><a href="#location-description-page" style="color:white;padding-top:25%;">Next</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -452,12 +482,12 @@
    </section>
 
    <section data-role="page" id="location-description-page">
-      <header data-role="header">
-         <h1>Describe Animal</h1>
+      <header data-role="header" style="background-color: #351c11;height: 10vh;">
+         <h1 style="color:white; font-size:1.5em; top:15%;">Describe Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-add-location">Save</a></li>
+            <li><a href="#" class="js-add-location" style="color:white;padding-top:25%;">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -527,9 +557,9 @@
             <form action="" id="profile-form" data-ajax="false" class="form">
   
                <div class="form-control" style="overflow: hidden; margin: 1.5em 0;">
-                  <a href="#profile-page" class="form-button signin-button"style="float: right; width: 30%;">Save</a>
+                  <a href="#profile-page" class="form-button signin-button"style="float: right; width: 25%;">Save</a>
 
-                  <a href="#" class="js-logout form-button signin-button" style="float: left; width: 30%">Sign out</a>
+                  <a href="#" class="js-logout form-button signin-button" style="float: left; width: 25%">Sign out</a>
 
                </div>
             </form>
@@ -539,12 +569,12 @@
 
 
 <section data-role="page" id="user-edit-page">
-      <header data-role="header">
-         <h1>Edit Your Info</h1>
+      <header data-role="header" style="background-color: #351c11;height: 10vh;">
+         <h1 style="color:white; font-size:1.5em; top:15%;">Edit Your Info</h1>
          <ul>
-            <li><a href="#" data-rel="back">Cancel</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="back">Save</a></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Cancel</a></li>
+            <li class="flex-stretch" ></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
@@ -555,12 +585,12 @@
    </section>
 
    <section data-role="page" id="user-password-page">
-      <header data-role="header">
-         <h1>Edit Your Password</h1>
+      <header data-role="header" style="background-color: #351c11;height: 10vh;">
+         <h1 style="color:white; font-size:1.5em; top:15%;">Edit Your Password</h1>
          <ul>
-            <li><a href="#" data-rel="back">Cancel</a></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Cancel</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="back">Save</a></li>
+            <li><a href="#" data-rel="back" style="color:white;padding-top:25%;">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
