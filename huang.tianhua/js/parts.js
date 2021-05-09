@@ -26,14 +26,14 @@ const makeUserProfile = o => `
 </div>
 
 <div class="user-inffo">
-<div class="user-profile-name1"><p><b>User:</b></p></div>
+<div class="user-profile-name1" style="color:#351c11;"><p><b>User:</b></p></div>
 <div class="user-profile-description">
    <div class="user-profile-name">${o.name}</div>
 
 </div></div>
 
 <div class="user-inffo">
-<div class="user-profile-email1"><p><b>Email: </b></></div>
+<div class="user-profile-email1" style="color:#351c11;"><p><b>Email: </b></></div>
 <div class="user-profile-description">
    <div class="user-profile-email">${o.email}</div>
 </div></div>
@@ -41,8 +41,8 @@ const makeUserProfile = o => `
 const makeAnimalInfo = o => `
 <div class="overscroll">
 <div class="animal-innfo">
-<div class="animal-name1 display-flex"><p><b>Nickname:</b></p></div>
-<div class="animal-name display-flex">${o.name}</div>
+<div class="animal-name1"><p><b>Nickname:</b></p></div>
+<div class="animal-name">${o.name}</div>
 </div>
 
 <div class="animal-innfo">
@@ -57,14 +57,14 @@ const makeAnimalInfo = o => `
 
 
 <div class="animal-innfo">
-<div class="animal-breed1"><p><b>Date:</b></p></div>
-<div class="animal-breed">${o.date_create}</div>
+<div class="animal-date1"><p><b>Date:</b></p></div>
+<div class="animal-date">${o.date_create}</div>
 </div>
 
 
 <div class="animal-innfo">
-<div class="animal-breed1"><p><b>Description:</b></p></div>
-<div class="animal-breed">${o.description}</div>
+<div class="animal-description1"><p><b>Description:</b></p></div>
+<div class="animal-description">${o.description}</div>
 </div>
 </div>
 `;

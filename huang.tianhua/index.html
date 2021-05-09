@@ -262,8 +262,7 @@
 
    <section data-role="page" id="user-profile-page">
       <div data-role="main">
-         <div class="profile"></div>
-
+         <div class="profile"></div><div class="overscroll"></div>
          <div class="floater top right">
             <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a>
          </div>
@@ -277,11 +276,29 @@
                   <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
                </div>
                <div class="modal-body"><div class="overscroll">
-                  <ul>
+                  <div class="setting">
+                     
+                     <div class="editprofile">
+                        <a href="#user-edit-page" style="color:#351c11;">Change Your Info</a>
+                        
+                     </div>
+
+                     <div class="editprofile">
+                        <a href="#user-password-page" style="color:#351c11;">Change Password</a>
+                        
+                     </div>
+
+                      <div class="editprofile1" style="float:right;">
+                        <a href="#" class="js-logout" style="color:#351c11;">Sign Out</a>
+                        
+                     </div>
+
+                  </div>
+                  <!-- <ul class="setting">
                      <li><a href="#user-edit-page">Change Your Info</a></li>
                      <li><a href="#user-password-page">Change Password</a></li>
                      <li><a href="#" class="js-logout">Sign Out</a></li>
-                  </ul>
+                  </ul> -->
                </div>
                </div>
             </div>
