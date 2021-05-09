@@ -63,7 +63,7 @@ const setMapBounds = (map_el,map_locs) => {
          navigator.geolocation.getCurrentPosition(p=>{
             let pos = {
                lat:p.coords.latitude,
-               lat:p.coords.longitude
+               lng:p.coords.longitude
             };
             map.setCenter(pos);
             map.setZoom(zoom);
@@ -87,117 +87,38 @@ const setMapBounds = (map_el,map_locs) => {
 
 
 
+
+
 let mapStyles = [
     {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
+                "hue": "#2c3e50"
+            },
             {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
+                "saturation": 250
             }
         ]
     },
     {
         "featureType": "road",
-        "elementType": "all",
+        "elementType": "geometry",
         "stylers": [
             {
-                "saturation": -100
+                "lightness": 50
             },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
             {
                 "visibility": "simplified"
             }
         ]
     },
     {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
+        "featureType": "road",
+        "elementType": "labels",
         "stylers": [
             {
                 "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#c0e4f3"
-            },
-            {
-                "visibility": "on"
             }
         ]
     }
 ];
-
-// let mapStyles = [
-//     {
-//         "stylers": [
-//             {
-//                 "hue": "#2c3e50"
-//             },
-//             {
-//                 "saturation": 250
-//             }
-//         ]
-//     },
-//     {
-//         "featureType": "road",
-//         "elementType": "geometry",
-//         "stylers": [
-//             {
-//                 "lightness": 50
-//             },
-//             {
-//                 "visibility": "simplified"
-//             }
-//         ]
-//     },
-//     {
-//         "featureType": "road",
-//         "elementType": "labels",
-//         "stylers": [
-//             {
-//                 "visibility": "off"
-//             }
-//         ]
-//     }
-// ];
