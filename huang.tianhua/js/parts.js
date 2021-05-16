@@ -6,11 +6,8 @@ const makeAnimalList = templater(o=>`
       <div class="animallist-name">
       <p>Users: <span>${o.name}</span></p></div>
       <div class="animallist-info">
-               <p>Type: <span>${o.type}</span></p>
-            <p>Breed: <span>${o.breed}</span></p>
-            <span>
-                     <img src="img/can.svg" style="width: 2em; right: 7%; top: 30%;">
-                  </span>
+            <p>Dog Breed: <span>${o.breed}</span></p>
+            <p>Age: <span>${o.type}</span></p>
             </div>
    
    </div>
@@ -19,11 +16,9 @@ const makeAnimalList = templater(o=>`
 </div>
 `);
 
-
 const makeUserProfile = o => `
 <div class="user-profile-image">
-   <img src="${o.img}" alt="">
-</div>
+   <img src="${o.img}" alt=""> </div>
 
 <div class="user-inffo">
 <div class="user-profile-name1" style="color:#351c11;"><p><b>User:</b></p></div>
@@ -38,6 +33,7 @@ const makeUserProfile = o => `
    <div class="user-profile-email">${o.email}</div>
 </div></div>
 `;
+
 const makeAnimalInfo = o => `
 <div class="overscroll">
 <div class="animal-innfo">
@@ -45,14 +41,15 @@ const makeAnimalInfo = o => `
 <div class="animal-name">${o.name}</div>
 </div>
 
+
 <div class="animal-innfo">
-<div class="animal-type1"><p><b>Type:</b></p></div>
-<div class="animal-type">${o.type}</div>
+<div class="animal-breed1"><p><b>Dog Breed:</b></p></div>
+<div class="animal-breed">${o.breed}</div>
 </div>
 
 <div class="animal-innfo">
-<div class="animal-breed1"><p><b>Breed:</b></p></div>
-<div class="animal-breed">${o.breed}</div>
+<div class="animal-type1"><p><b>Age:</b></p></div>
+<div class="animal-type">${o.type}</div>
 </div>
 
 
@@ -66,6 +63,9 @@ const makeAnimalInfo = o => `
 <div class="animal-description1"><p><b>Description:</b></p></div>
 <div class="animal-description">${o.description}</div>
 </div>
+
+
+<button class="form-button animal-delete" data-id="${o.id}">Delete</button>
 </div>
 `;
 
@@ -79,8 +79,8 @@ const makeAnimalPopup = o => `
    </div>
    <div class="flex-none" style="padding:1em">
       <div class="animal-name">Name:${o.name}</div>
-      <div class="animal-type">Type:${o.type}</div>
-      <div class="animal-breed">Breed:${o.breed}</div>
+      <div class="animal-breed">Dog Breed:${o.breed}</div>
+      <div class="animal-type">Age:${o.type}</div>
    </div>
 </div>
 `;
@@ -125,31 +125,33 @@ ${FormControlInput({
    name:'name',
    displayname:'Name',
    type:'text',
-   placeholder:'Type The Animal Name',
+   placeholder:'Type The Dog Name',
    value:o.name
 })}
 ${FormControlInput({
    namespace:namespace,
    name:'type',
-   displayname:'Type',
+   displayname:'Age',
    type:'text',
-   placeholder:'Type The Animal Type',
+   placeholder:'Type The Your Pet Age',
    value:o.type
 })}
 ${FormControlInput({
    namespace:namespace,
    name:'breed',
-   displayname:'Breed',
+   displayname:'Dog Breed',
    type:'text',
-   placeholder:'Type The Animal Breed',
+   placeholder:'Type The Dog Breed',
    value:o.breed
 })}
+
+
 ${FormControlTextarea({
    namespace:namespace,
    name:'description',
    displayname:'Description',
    type:'text',
-   placeholder:'Type The Animal Description',
+   placeholder:'Type The Dog Description',
    value:o.description
 })}
 `
@@ -209,3 +211,30 @@ ${FormControlInput({
    value:''
 })}
 `
+
+
+
+
+
+const makeAnimalListSet = (animals,missing_text="") => {
+   animal_template = animals.length?
+      makeAnimalList(animals):
+      `<div class="animallist-item"><div class="animallist-description">${missing_text}</div></div>`
+
+   $("#list-page .animallist").html(animal_template);
+}
+
+const capitalize = s => s[0].toUpperCase()+s.substr(1);
+
+const filterList = (animals,type) => {
+   let a = [...(new Set(animals.map(o=>o[type])))];
+   return templater(o=>o?`<li class="filter" data-field="${type}" data-value="${o}">${capitalize(o)}</li>`:'')(a);
+}
+
+const makeFilterList = (animals) => {
+    return `
+   <li class="filter" data-field="type" data-value="">All dogs</li>
+   |
+   ${filterList(animals,'breed')}
+   `
+}

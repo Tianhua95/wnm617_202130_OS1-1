@@ -91,22 +91,36 @@ const setMapBounds = (map_el,map_locs) => {
 
 let mapStyles = [
     {
+        "featureType": "administrative",
+        "elementType": "all",
         "stylers": [
             {
-                "hue": "#2c3e50"
-            },
-            {
-                "saturation": 250
+                "visibility": "off"
             }
         ]
     },
     {
-        "featureType": "road",
-        "elementType": "geometry",
+        "featureType": "landscape",
+        "elementType": "all",
         "stylers": [
             {
-                "lightness": 50
+                "visibility": "simplified"
             },
+            {
+                "hue": "#0066ff"
+            },
+            {
+                "saturation": 74
+            },
+            {
+                "lightness": 100
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
             {
                 "visibility": "simplified"
             }
@@ -114,11 +128,85 @@ let mapStyles = [
     },
     {
         "featureType": "road",
-        "elementType": "labels",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "weight": 0.6
+            },
+            {
+                "saturation": -85
+            },
+            {
+                "lightness": 61
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
         "stylers": [
             {
                 "visibility": "off"
             }
         ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "color": "#5f94ff"
+            },
+            {
+                "lightness": 26
+            },
+            {
+                "gamma": 5.86
+            }
+        ]
     }
-];
+]
+
+

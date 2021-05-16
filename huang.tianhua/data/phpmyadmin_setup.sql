@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.4
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 07, 2021 at 07:27 AM
--- Server version: 5.6.48-cll-lve
+-- Generation Time: Apr 05, 2021 at 03:50 PM
+-- Server version: 5.7.33
 -- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -13,25 +13,8 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
--- Database: `tian_class`
+-- Database: `hamil19_class`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `track_202103_locations`
---
-
-CREATE TABLE `track_202103_locations` (
-  `id` int(13) NOT NULL,
-  `animal_id` int(13) NOT NULL,
-  `lat` decimal(10,8) NOT NULL,
-  `lng` decimal(11,8) NOT NULL,
-  `description` text NOT NULL,
-  `photo` varchar(256) NOT NULL,
-  `icon` varchar(256) NOT NULL,
-  `date_create` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -47,6 +30,23 @@ CREATE TABLE `track_202130_animals` (
   `breed` varchar(64) NOT NULL,
   `description` text NOT NULL,
   `img` varchar(256) NOT NULL,
+  `date_create` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `track_202130_locations`
+--
+
+CREATE TABLE `track_202130_locations` (
+  `id` int(13) NOT NULL,
+  `animal_id` int(13) NOT NULL,
+  `lat` decimal(10,8) NOT NULL,
+  `lng` decimal(11,8) NOT NULL,
+  `description` text NOT NULL,
+  `photo` varchar(256) NOT NULL,
+  `icon` varchar(256) NOT NULL,
   `date_create` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -71,15 +71,15 @@ CREATE TABLE `track_202130_users` (
 --
 
 --
--- Indexes for table `track_202103_locations`
---
-ALTER TABLE `track_202103_locations`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `track_202130_animals`
 --
 ALTER TABLE `track_202130_animals`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `track_202130_locations`
+--
+ALTER TABLE `track_202130_locations`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -93,15 +93,15 @@ ALTER TABLE `track_202130_users`
 --
 
 --
--- AUTO_INCREMENT for table `track_202103_locations`
---
-ALTER TABLE `track_202103_locations`
-  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `track_202130_animals`
 --
 ALTER TABLE `track_202130_animals`
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `track_202130_locations`
+--
+ALTER TABLE `track_202130_locations`
   MODIFY `id` int(13) NOT NULL AUTO_INCREMENT;
 
 --
