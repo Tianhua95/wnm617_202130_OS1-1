@@ -1,10 +1,14 @@
 
-const RecentPage = async () => {
-   let locations = await query({
-      type:'recent_locations',
-      params:[sessionStorage.userId]
-   });
-   console.log(locations)
+const RecentPage = async (locations) => {
+
+   if(!locations) {
+       locations = await query({
+            type:'recent_locations',
+            params:[sessionStorage.userId]
+      });
+   }
+   
+   console.log(locations.result)
 
    let valid_animals = locations.result.reduce((r,o)=>{
       o.icon = o.img;

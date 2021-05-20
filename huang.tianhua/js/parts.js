@@ -6,8 +6,8 @@ const makeAnimalList = templater(o=>`
       <div class="animallist-name">
       <p>Users: <span>${o.name}</span></p></div>
       <div class="animallist-info">
-            <p>Dog Breed: <span>${o.breed}</span></p>
-            <p>Age: <span>${o.type}</span></p>
+            <p style="color:#351c11;">Dog Breed: <span>${o.breed}</span></p>
+            <p style="color:#351c11;">Age: <span>${o.type}</span></p>
             </div>
    
    </div>
@@ -38,12 +38,12 @@ const makeAnimalInfo = o => `
 <div class="overscroll">
 <div class="animal-innfo">
 <div class="animal-name1"><p><b>Nickname:</b></p></div>
-<div class="animal-name">${o.name}</div>
+<div class="animal-name2">${o.name}</div>
 </div>
 
 
 <div class="animal-innfo">
-<div class="animal-breed1"><p><b>Dog Breed:</b></p></div>
+<div class="animal-breed1" ><p><b>Dog Breed:</b></p></div>
 <div class="animal-breed">${o.breed}</div>
 </div>
 
@@ -78,9 +78,9 @@ const makeAnimalPopup = o => `
       <img src="${o.img}">
    </div>
    <div class="flex-none" style="padding:1em">
-      <div class="animal-name">Name:${o.name}</div>
-      <div class="animal-breed">Dog Breed:${o.breed}</div>
-      <div class="animal-type">Age:${o.type}</div>
+      <div class="animal-nam"><b>Name:</b> ${o.name}</div>
+      <div class="animal-breedd"><b>Dog Breed:</b> ${o.breed}</div>
+      <div class="animal-typ"><b>Age:</b> ${o.type}</div>
    </div>
 </div>
 `;
@@ -234,7 +234,6 @@ const filterList = (animals,type) => {
 const makeFilterList = (animals) => {
     return `
    <li class="filter" data-field="type" data-value="">All dogs</li>
-   |
    ${filterList(animals,'breed')}
    `
 }

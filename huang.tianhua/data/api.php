@@ -106,7 +106,7 @@ function makeStatement($data) {
       case "check_signin":
          return makeQuery($c,"SELECT id FROM `track_202130_users` WHERE `username`=? AND `password`=md5(?)",$p);
 
-
+            // SEARCH
       case "search_animals":
          $p = ["%$p[0]%",$p[1]];
          return makeQuery($c,"SELECT *
@@ -115,6 +115,24 @@ function makeStatement($data) {
                `name` LIKE ? AND
                `user_id` = ?
             ",$p);
+
+          // SEARCH
+      case "search_recent_animals":
+         $p = ["%$p[0]%","%$p[0]%",$p[1]];
+         return makeQuery($c, "SELECT *
+            FROM `track_202130_animals` a
+            RIGHT JOIN (
+               SELECT * FROM `track_202103_locations`
+               ORDER BY `date_create` DESC
+            ) l
+            ON a.id = l.animal_id
+            WHERE
+               a.name LIKE ? OR
+               a.breed LIKE ? AND
+               a.user_id = ?
+            GROUP BY l.animal_id
+            ", $p);
+
       case "filter_animals":
          return makeQuery($c,"SELECT *
             FROM `track_202130_animals`

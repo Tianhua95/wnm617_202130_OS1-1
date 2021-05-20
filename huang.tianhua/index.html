@@ -221,7 +221,7 @@
                </form>
 
 
-      <header data-role="header3">
+      <header data-role="sort">
          <ul class="filter-set"></ul>
       </header>
       <div data-role="main"><div class="overscroll">
@@ -314,11 +314,6 @@
                      </div>
 
                   </div>
-                  <!-- <ul>
-                     <li><a href="#user-edit-page">Change Your Info</a></li>
-                     <li><a href="#user-password-page">Change Password</a></li>
-                     <li><a href="#" class="js-logout">Sign Out</a></li>
-                  </ul> -->
                </div>
                </div>
             </div>
@@ -375,7 +370,7 @@
                <label class="image-uploader full">
                   <input type="file" data-role="none" id="user-upload-input">
                </label>
-               <label for="user-upload-input" class="floater bottom left">
+               <label for="user-upload-input" class="floater top left">
                   <img src="img/icon/camera.svg" alt="" class="icon">
                </label>
             </form>
@@ -398,12 +393,22 @@
          <div class="animal-top">
             <div class="floater top left header no-touch" style="background-image: linear-gradient(180deg, #ffffff96, #ffffff00);">
                <ul>
-                  <li class="flex-none do-touch"><a href="#" data-rel="back">Back</a></li>
+                  <li class="flex-none do-touch"><a href="#" data-rel="back" style="float:left;color:white; margin-top: 0.7em;">Back</a></li>
                   <li class="flex-stretch"></li>
-                  <li class="flex-none do-touch"><a href="#animal-edit-page">Edit</a></li>
+                  <li class="flex-none do-touch"><a href="#animal-edit-page" style="color:white; margin-top: 0.7em;">Edit</a></li>
                </ul>
+               </div>
+
+                <div class="floater bottom right" style="font-size:1.5em">
+               <form class="icon" data-ajax="false" id="animal-update-image-form">
+                  <input type="file" id="animal-update-image-input" class="hidden" data-role="none">
+                  <label for="animal-update-image-input" style="margin:0"><img src="img/icon/pencil.svg" alt=""></label>
+               </form>
             </div>
          </div>
+
+         </div>
+         
          <div class="header animal-nav">
             <ul>
                <li class="flex-stretch"><a href="#">Map</a></li>
@@ -536,9 +541,24 @@
 
 
 
+   <script type="text/template" id="footer-template">
+   <ul class="title-icons">
+      <li data-page-link="recent-page"><a href="#recent-page">
+         <span class="icon"><img src="img/locationn.svg" alt=""></span>
+         <span class="title">Recent</span>
+      </a></li>
+      <li data-page-link="list-page"><a href="#list-page">
+         <span class="icon"><img src="img/profile.png" alt=""></span>
+         <span class="title">List</span>
+      </a></li>
+      <li data-page-link="user-profile-page"><a href="#user-profile-page">
+         <span class="icon"><img src="img/house.png" alt=""></span>
+         <span class="title">Profile</span>
+      </a></li>
+   </ul>
+   </script>
 
-
- <script type="text/template" id="footer-template">
+<!--  <script type="text/template" id="footer-template">
    <ul class="title-icons">
       <li><a href="#recent-page">
          <span class="icon"><img src="img/locationn.svg" alt=""></span>
@@ -553,7 +573,10 @@
          <span class="title">Profile</span>
       </a></li>
    </ul>
-   </script>
+   </script> -->
+
+
+
 
    <script type="text/template" id="animal-link-template">
    this is an animal link
