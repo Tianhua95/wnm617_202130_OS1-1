@@ -18,21 +18,27 @@ const makeAnimalList = templater(o=>`
 
 const makeUserProfile = o => `
 <div class="user-profile-image">
-   <img src="${o.img}" alt=""> </div>
+   <img src="${o.img}" alt=""> 
+   
+   <div class="floater bottom right">
+      <a href="#user-edit-page" class="icon" style="margin-right:1em;color:#351c11;"><img src="img/icon/pencil.svg" alt="">Edit Your info</a>
+   </div>
+   
+   </div>
 
-<div class="user-inffo">
-<div class="user-profile-name1" style="color:#351c11;"><p><b>User:</b></p></div>
-<div class="user-profile-description">
-   <div class="user-profile-name">${o.name}</div>
+
+<div class="user-inffo" style="margin-top:1em;">
+<div class="user-profile-description" style="text-algin:center;">
+   <div class="user-profile-name" style="color:#351c11;">${o.name}
+       <div class="user-profile-email" style="color:#351c11;">${o.email}</div></div>
+
 
 </div></div>
+<hr>
 
-<div class="user-inffo">
-<div class="user-profile-email1" style="color:#351c11;"><p><b>Email: </b></></div>
-<div class="user-profile-description">
-   <div class="user-profile-email">${o.email}</div>
-</div></div>
 `;
+
+
 
 const makeAnimalInfo = o => `
 <div class="overscroll">

@@ -5,6 +5,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Animal Tracker</title>
 
+   <link rel="apple-touch-icon" href="logo_icon.png">
+   <link rel="icon" href="img/logo.png">
+
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="#52B28B">
+
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
 
@@ -141,7 +147,7 @@
 
             <div class="welcome1" style="padding:1em">
                   <h1>Sign up</h1>
-                  <h3>Continu finish your info</h3>
+                  <h3>Please register your account</h3>
                </div>
 
             <form class="form" id="signup-second-form" data-ajax="false" style="padding:1em">
@@ -204,6 +210,8 @@
 <!-- -----list----- -->
 
    <section data-role="page" id="list-page">
+
+
       <header data-role="header" style="background-color:#351c11; height: 10vh;">
 
          <h1 class="list-title" style="color: white; font-size: 1.7em; text-align: center; top:15%;">Cute Dogs list</h1>
@@ -226,7 +234,14 @@
       </header>
       <div data-role="main"><div class="overscroll">
 
+<hr>
          <div class="animallist"></div>
+
+        <!--  <div class="floater bottom" style="padding:1em; width:100%;">
+            <a href="#animal-add-page" class="circle-button js-add-from-recent" style="display: block; margin-left: auto; margin-right: auto;">&plus;</a>
+         </div>
+ -->
+         
       </div></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
 
@@ -273,49 +288,25 @@
    <!-- USER DATA SECTION -->
 
    <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-         <div class="profile"></div>
 
-         <div class="floater top right">
-            <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/set.svg" alt=""></a>
-         </div>
-
-
-         <div class="modal" id="user-settings-modal">
-            <div class="modal-drawer right">
-               <div class="modal-head display-flex">
-                  <div class="flex-none">Settings</div>
-                  <div class="flex-stretch"></div>
-                  <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
-               </div>
-               <div class="modal-body"><div class="overscroll">
-                  <div class="setting">
-                     
-                      <div class="editprofile">
-                        <a href="#user-upload-page" style="color:#351c11;">Upload Profile Photo</a>
-                        
-                     </div>
-
-
-                     <div class="editprofile">
-                        <a href="#user-edit-page" style="color:#351c11;">Change Your Info</a>
-                        
-                     </div>
-
-                     <div class="editprofile">
-                        <a href="#user-password-page" style="color:#351c11;">Change Password</a>
-                        
-                     </div>
-
-
-                      <div class="editprofile1" style="float:right;">
+        
+ <div class="profile"></div>
+ <div class="floater top right" style="float:right;margin:1em;">
                         <a href="#" class="js-logout" style="color:#351c11;">Sign Out</a>
                         
-                     </div>
+   </div>
 
-                  </div>
-               </div>
-               </div>
+      </header>
+      <div data-role="main"><div class="overscroll">
+
+         <div class="box" style=" margin-top:5em;">
+         
+               <h4 class="about" style="color:#351c11;text-align: center; font-size: 1.3em;">“Dogs do <i>speak </i>,<br>but only to those who <br>know how to <i>listen</i>.” <br></h4>
+               <p style="color:#351c11;float:right;margin-right: 5em;"> <i>– Orhan Pamuk</i></p>
+            </div>
+</div>
+</div></div></div>
+
             </div>
          </div>
       </div>
@@ -323,6 +314,7 @@
    </section>
 
    <section data-role="page" id="user-edit-page">
+
       <header data-role="header" style="background-color:#351c11; height: 10vh;">
          <h1 class="list-title" style="color: white; font-size: 1.5em; text-align: center; top:15%;">Edit Your Info</h1>
          <ul>
@@ -332,8 +324,21 @@
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-vertical">
+
+
          <div class="overscroll">
+             <div class="profile"></div>
             <form id="user-edit-form" data-ajax="false" style="padding:1em"></form>
+
+             <div class="editprofile">
+                        <a href="#user-upload-page" style="color:#351c11;">Upload Profile Photo</a>
+                        
+                     </div>
+
+              <div class="editprofile">
+                        <a href="#user-password-page" style="color:#351c11;">Change Password</a>
+                        
+                     </div>
          </div>
       </div>
    </section>
